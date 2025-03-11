@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Dheeraj Vishwakarma Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+* {
+padding: 0px;
+margin: 0px;
+}
+body {
+background-color: rgb(74, 85, 235);
+color: white;
+font-family: 'poppins', sans-serif;
+}
+nav {
+display: flex;
+justify-content: space-around;
+align-items: center;
+height: 60px;
+background-color: rgb(10, 10, 14);
+}
+nav ul {
+display: flex;
+justify-content: center;
+}
+nav ul li {
+list-style: none;
+margin: 0 23px;
+}
+.left {
+font-size: 1.5rem;
+}
+.firstSection {
+display: flex;
+justify-content: space-around;
+margin: 50px 0;
+}
+.firstSection>div {
+width: 30%;
+}
+.leftSection {
+font-size: 2.5rem;
+margin: 70px 0px;
+}
+.rightSection {
+width: 34px;
+}
+.rightSection img {
+width: 90%;
+margin: 50px 0px;
+}
+.purple {
+color: rgb(170, 107, 228);
+}
+.hyper {
+text-decoration: none;
+color: white;
+}
+.hyper:hover {
+color: rgb(153, 153, 226);
+font-size: 1.09rem;
+}
+#element {
+color: rgb(170, 107, 228);
+}
+.secondsection{
+max-width: 80vw;
+margin: auto;
+}
+.sectionthree{
+max-width: 80vw;
+margin: auto;
+}
+main hr {
+border: 0px;
+background-color: rgb(170, 107, 228);
+height: 1.2px;
+margin: 40px 84px;
+}
+.text{
+font-size: 20px;
+}
+footer{
+background-color: rgb(10, 10, 14);
+}
+.footer{
+display: flex;
+padding: 23px 122px;
+justify-content: space-evenly;
+}
+.footer ul{
+list-style: none;
+}
+.footer > div{
+width: 223px;
+}
+.text-center{
+text-align: center;
+color: grey;
+padding: 12px 0;
+}
+.work{
+max-width: 80vw;
+margin: auto;
+}
+p{
+font-size: 20px;
+}
+.line{
+list-style-type: none;
+justify-content: center;
+color: white;
+}
+.footer-second{
+display: flex;
+justify-content: center;
+}
+.footer-second a{
+text-decoration: none;
+padding: 10px;
+background-color: rgb(170, 107, 228);
+margin:10px;
+border-radius: 50%;
+}
+.footer-second a i{
+font-size: 2em;
+color: white;
+opacity: 0.9;
+}
+.ree{
+padding: 20px 0;
+font-size: 15px;
+}
+.contact-form {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 20px 0;
+}
+.contact-form input, .contact-form textarea {
+width: 50%;
+padding: 10px;
+margin: 10px 0;
+border: none;
+border-radius: 5px;
+}
+.contact-form button {
+padding: 10px 20px;
+background-color: rgb(170, 107, 228);
+border: none;
+color: white;
+cursor: pointer;
+border-radius: 5px;
+}
+.contact-form button:hover {
+background-color: rgb(153, 153, 226);
+}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<div class="left">Dheeraj Portfolio</div>
+<div class="right">
+<ul>
+<li><a href="/" class="hyper">Home</a></li>
+<li><a href="#secondsection" class="hyper">About</a></li>
+<li><a href="#project" class="hyper">Projects</a></li>
+<li><a href="#contact" class="hyper">Contact Me</a></li>
+</ul>
+</div>
+</nav>
+</header>
+<main>
+<section class="firstSection">
+<div class="leftSection">
+Hi, My name is <span class="purple">Dheeraj </span>
+<div>and I am a passionate</div>
+<span id="element"></span>
+</div>
+<div class="rightSection">
+<img src="avtar.jpg">
+</div>
+</section>
+<hr>
+<section class="secondsection">
+<h1>ABOUT ME 😎</h1>
+<p class="text">Enthusiastic and dedicated Engineering student pursuing a BE degree at Thakur College of Engineering and Technology...</p>
+</section>
+<hr>
+<div class="sectionthree">
+<h1>SKILLS 💻</h1>
+<p>Web: HTML, CSS <br>Tools: Git, Canva, gpt <br>Languages: Python, C/C++</p>
+</div>
+<hr>
+<div class="work">
+<h1 id="project">PROJECTS 📂</h1>
+<p><a href="note_taking_project.html" class="hyper">Note-Taking App</a></p>
+<p><a href="to_do_list.html" class="hyper">To Do List</a></p>
+<p><a href="product_listing.html" class="hyper">Product Listing Page</a></p>
+</div>
+<hr>
+<section id="contact">
+<h1>Contact Me</h1>
+<form class="contact-form">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message" required></textarea>
+<button type="submit">Send</button>
+</form>
+</section>
+<hr>
+</main>
+<footer>
+<div class="footer">
+<div class="footer-first">
+<H3>Dheeraj Portfolio</H3>
+</div>
+<div class="footer-second">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fab fa-github"></i></a>
+</div>
+</div>
+<div class="text-center">
+Copyright &#169; www.DheerajPortfolio.com | All rights reserved
+</div>
+</footer>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+var typed = new Typed('#element', {
+strings: ['Web developer!', 'Coder!'],
+typeSpeed: 50,
+});
+</script>
+</body>
+</html>     

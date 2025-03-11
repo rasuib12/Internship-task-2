@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .filter-sort {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+        select, input {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+            max-width: 200px;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: calc(33.333% - 20px);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product h3 {
+            margin-bottom: 10px;
+            color: #000000;
+        }
+        .product p {
+            margin: 5px 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Product Listing</h1>
+        <div class="filter-sort">
+            <select id="categoryFilter" onchange="filterProducts()">
+                <option value="all">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="fashion">Fashion</option>
+                <option value="home">Home</option>
+            </select>
+            <input type="number" id="priceFilter" placeholder="Max Price" oninput="filterProducts()">
+            <select id="sortRating" onchange="sortProducts()">
+                <option value="high">Highest Rating</option>
+                <option value="low">Lowest Rating</option>
+            </select>
+        </div>
+        <div class="product-list" id="productList"></div>
+    </div>
+    
+    <script>
+        const products = [
+            { name: "Laptop", category: "electronics", price: 20000, rating: 4.5 },
+            { name: "Smartphone", category: "electronics", price: 12000, rating: 4.8 },
+            { name: "T-shirt", category: "fashion", price: 200, rating: 4.2 },
+            { name: "Sofa", category: "home", price: 30000, rating: 4.6 },
+            { name: "Watch", category: "fashion", price: 1500, rating: 4.7 },
+        ];
+        
+        function displayProducts(filteredProducts) {
+            const productList = document.getElementById("productList");
+            productList.innerHTML = "";
+            filteredProducts.forEach(product => {
+                const div = document.createElement("div");
+                div.classList.add("product");
+                div.innerHTML = `<h3>${product.name}</h3><p>Category: ${product.category}</p><p>Price: Rs.${product.price}</p><p>Rating: ${product.rating}</p>`;
+                productList.appendChild(div);
+            });
+        }
+        
+        function filterProducts() {
+            const category = document.getElementById("categoryFilter").value;
+            const maxPrice = document.getElementById("priceFilter").value;
+            let filtered = products.filter(p => (category === "all" || p.category === category) && (!maxPrice || p.price <= maxPrice));
+            displayProducts(filtered);
+        }
+        
+        function sortProducts() {
+            let sorted = [...products];
+            const sortBy = document.getElementById("sortRating").value;
+            sorted.sort((a, b) => sortBy === "high" ? b.rating - a.rating : a.rating - b.rating);
+            displayProducts(sorted);
+        }
+        
+        displayProducts(products);
+    </script>
+</body>
+</html>
