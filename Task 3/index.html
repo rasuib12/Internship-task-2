@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Learning Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Interactive Learning Page</h1>
+  </header>
+
+  <div class="container" id="carousel-container">
+    <h2>Image Carousel</h2>
+    <div id="carousel">
+      <button id="prev-btn">❮</button>
+      <img id="carousel-image" src="https://via.placeholder.com/600x400" alt="Carousel Image">
+      <button id="next-btn">❯</button>
+    </div>
+  </div>
+
+  <div class="container" id="quiz-container">
+    <h2 id="quiz-question">Question will appear here</h2>
+    <ul id="quiz-options"></ul>
+    <p id="quiz-feedback"></p>
+    <button id="next-question">Next Question</button>
+    <p id="quiz-score"></p>
+  </div>
+
+  <div class="container" id="joke-container">
+    <h2>Need a Laugh? Get a Random Joke!</h2>
+    <button id="fetch-joke">Fetch a Joke</button>
+    <p id="joke"></p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Interactive Learning Inc. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
